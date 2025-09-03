@@ -8,6 +8,8 @@ RUN python3 -m pip install --no-cache-dir -r /app/requirements.txt
 # Copy project files
 COPY . /app
 
+EXPOSE 8000
+
 CMD ["run", "--system-env"]
 
 # To run one specific component, use:
