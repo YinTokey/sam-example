@@ -2,14 +2,16 @@ name: sam-demo
 
 services:
   agent-mesh:
-    build: ../backend
+    build: .
     platform: linux/amd64
     ports:
       - "8080:8000"
+      # You can also expose the REST API port if you are running it
+      # - "8001:8001"
     volumes:
-      - ../backend:/app
+      - .:/app
     env_file:
-      - ../backend/.env
+      - .env
     environment:
       - PYTHONPATH=/app
       - FASTAPI_PORT=8000
