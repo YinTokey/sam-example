@@ -9,6 +9,7 @@ RUN python3 -m pip install --no-cache-dir -r /app/requirements.txt
 COPY . /app
 
 EXPOSE 8000
+EXPOSE 8080
 
 CMD ["run", "--system-env"]
 
