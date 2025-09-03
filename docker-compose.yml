@@ -1,0 +1,22 @@
+name: sam-demo
+
+services:
+  agent-mesh:
+    build: ../backend
+    platform: linux/amd64
+    ports:
+      - "8080:8000"
+    volumes:
+      - ../backend:/app
+    env_file:
+      - ../backend/.env
+    environment:
+      - PYTHONPATH=/app
+      - FASTAPI_PORT=8000
+      - FASTAPI_HOST=0.0.0.0
+      # Add other environment variables from your configs here
+      - NAMESPACE=default
+      - SESSION_SECRET_KEY=a-very-secret-key
+      - WEBUI_GATEWAY_ID=webui_gateway
+      - ENABLE_EMBED_RESOLUTION=true
+version: '3.8'

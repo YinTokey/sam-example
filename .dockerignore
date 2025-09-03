@@ -1,0 +1,5 @@
+*.log
+dist
+.git
+.vscode
+.DS_Store

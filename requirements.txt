@@ -1,0 +1,3 @@
+solace-agent-mesh
+# Add the REST Gateway plugin from the official Solace Labs repository
+git+https://github.com/SolaceLabs/solace-agent-mesh-core-plugins@main#subdirectory=sam-rest-gateway
